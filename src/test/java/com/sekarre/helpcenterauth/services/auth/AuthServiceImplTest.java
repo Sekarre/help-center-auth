@@ -1,11 +1,10 @@
-package com.sekarre.helpcenterauth.services;
+package com.sekarre.helpcenterauth.services.auth;
 
 import com.sekarre.helpcenterauth.DTO.auth.TokenResponse;
 import com.sekarre.helpcenterauth.DTO.auth.UserCredentials;
 import com.sekarre.helpcenterauth.SecurityContextMockSetup;
 import com.sekarre.helpcenterauth.domain.User;
 import com.sekarre.helpcenterauth.security.jwt.JwtTokenUtil;
-import com.sekarre.helpcenterauth.services.impl.AuthServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -21,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-class AuthServiceTest extends SecurityContextMockSetup {
+class AuthServiceImplTest extends SecurityContextMockSetup {
 
     @Mock
     private UserDetailsService userDetailsService;
@@ -51,10 +50,10 @@ class AuthServiceTest extends SecurityContextMockSetup {
         when(passwordEncoder.matches(any(String.class), any(String.class))).thenReturn(true);
 
         //when
-        TokenResponse token = authService.getToken(userCredentials);
+        TokenResponse result = authService.getToken(userCredentials);
 
         //then
-        assertNotNull(token);
+        assertNotNull(result);
         verify(userDetailsService, times(1)).loadUserByUsername(userCredentials.getUsername());
         verify(passwordEncoder, times(1)).matches(userCredentials.getPassword(), user.getPassword());
     }

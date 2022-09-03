@@ -1,10 +1,9 @@
-package com.sekarre.helpcenterauth.services.impl;
+package com.sekarre.helpcenterauth.services.auth;
 
 import com.sekarre.helpcenterauth.DTO.auth.TokenResponse;
 import com.sekarre.helpcenterauth.DTO.auth.UserCredentials;
 import com.sekarre.helpcenterauth.domain.User;
 import com.sekarre.helpcenterauth.security.jwt.JwtTokenUtil;
-import com.sekarre.helpcenterauth.services.AuthService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;

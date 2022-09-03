@@ -1,4 +1,4 @@
-package com.sekarre.helpcenterauth.services;
+package com.sekarre.helpcenterauth.services.auth;
 
 
 import com.sekarre.helpcenterauth.DTO.auth.TokenResponse;

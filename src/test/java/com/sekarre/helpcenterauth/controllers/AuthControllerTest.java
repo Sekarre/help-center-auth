@@ -2,7 +2,7 @@ package com.sekarre.helpcenterauth.controllers;
 
 import com.sekarre.helpcenterauth.DTO.auth.TokenResponse;
 import com.sekarre.helpcenterauth.DTO.auth.UserCredentials;
-import com.sekarre.helpcenterauth.services.AuthService;
+import com.sekarre.helpcenterauth.services.auth.AuthService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static com.sekarre.helpcenterauth.factories.UserMockFactory.getUserCredentialsMock;
-import static com.sekarre.helpcenterauth.util.TestUtil.convertObjectToJsonBytes;
+import static com.sekarre.helpcenterauth.testutil.TestUtil.convertObjectToJsonBytes;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

@@ -1,4 +1,4 @@
-package com.sekarre.helpcenterauth.util;
+package com.sekarre.helpcenterauth.testutil;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;

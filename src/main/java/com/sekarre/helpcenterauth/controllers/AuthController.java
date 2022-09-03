@@ -1,7 +1,7 @@
 package com.sekarre.helpcenterauth.controllers;
 
 import com.sekarre.helpcenterauth.DTO.auth.UserCredentials;
-import com.sekarre.helpcenterauth.services.AuthService;
+import com.sekarre.helpcenterauth.services.auth.AuthService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
