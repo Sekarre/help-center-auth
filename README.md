@@ -6,7 +6,8 @@ Service responsible for authentication
   - Spring Boot
   - Spring Security  
   - Spring Data
-  - Spring MVC  
+  - Spring MVC 
+  - Spring Cloud
 - JUnit 5
 - Maven
 - Hibernate
